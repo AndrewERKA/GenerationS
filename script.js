@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     userDataForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        const email = document.getElementById('Почта').value;
-        const age = document.getElementById('Возрст').value;
-        users.push({ Почта, Возраст });
+        const email = document.getElementById('email').value;
+        const age = document.getElementById('age').value;
+        users.push({ email, age });
         localStorage.setItem('users', JSON.stringify(users));
         userForm.style.display = 'none';
         mainContent.style.display = 'block';

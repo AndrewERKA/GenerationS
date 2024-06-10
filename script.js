@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     userDataForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        const email = document.getElementById('email').value;
-        const age = document.getElementById('age').value;
-        users.push({ email, age });
+        const email = document.getElementById('Почта').value;
+        const age = document.getElementById('Возрст').value;
+        users.push({ Почта, Возраст });
         localStorage.setItem('users', JSON.stringify(users));
         userForm.style.display = 'none';
         mainContent.style.display = 'block';
@@ -32,8 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeStats.addEventListener('click', () => {
         statsModal.style.display = 'none';
     });
-
-    // Existing script
 
     const contactButton = document.getElementById('contactButton');
     const contactForm = document.getElementById('contactForm');

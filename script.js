@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById('generateEvent1').addEventListener('click', () => generateEvent('eventOutput1'));
-    // Add event listeners for other generators...
 
     function switchGenerator(generator) {
         document.querySelectorAll('.generator').forEach((gen, index) => {

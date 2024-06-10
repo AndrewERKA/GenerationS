@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор случайных событий</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="userForm" class="form-container">
+        <h2>Введите ваши данные</h2>
+        <form id="userDataForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" required>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <div id="mainContent" class="container" style="display:none;">
+        <button id="statsButton" class="stats-button">Статистика</button>
+        <div id="generator1" class="generator">
+            <h1>Генератор случайных событий</h1>
+            <button id="generateEvent1">Сгенерировать событие</button>
+            <div id="eventOutput1"></div>
+        </div>
+
+        <div id="generator2" class="generator" style="display:none;">
+            <h1>Генератор цитат успешных людей</h1>
+            <button id="generateQuote">Сгенерировать цитату</button>
+            <div id="quoteOutput"></div>
+        </div>
+        
+        <div id="generator3" class="generator" style="display:none;">
+            <h1>Генератор ежедневных задач</h1>
+            <button id="generateTask">Сгенерировать задачу</button>
+            <div id="taskOutput"></div>
+        </div>
+
+        <div id="generator4" class="generator" style="display:none;">
+            <h1>Генератор случайных шуток</h1>
+            <button id="generateJoke">Сгенерировать шутку</button>
+            <div id="jokeOutput"></div>
+        </div>
+        
+        <div id="generator5" class="generator" style="display:none;">
+            <h1>Генератор случайных фактов</h1>
+            <button id="generateFact">Сгенерировать факт</button>
+            <div id="factOutput"></div>
+        </div>
+
+        <div id="generator6" class="generator" style="display:none;">
+            <h1>Генератор случайных чисел</h1>
+            <input type="number" id="minNumber" placeholder="Минимум">
+            <input type="number" id="maxNumber" placeholder="Максимум">
+            <button id="generateNumber">Сгенерировать число</button>
+            <div id="numberOutput"></div>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <button id="contactUsButton" class="contact-us-button">Связаться с нами</button>
+
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Связаться с нами</h2>
+                <p>Email: Kozlova@mail.ru</p>
+                <p>Телефон: +7 123 456 78 90</p>
+                <div class="social-icons">
+                    <a href="https://youtu.be/dQw4w9WgXcQ?si=LkA0ibybI3axca0O" target="_blank"><img src="vk.png" alt="VK"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ?si=LkA0ibybI3axca0O" target="_blank"><img src="yu.png" alt="YouTube"></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ?si=LkA0ibybI3axca0O" target="_blank"><img src="inst.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dots" class="dot-container">
+        <span class="dot active" onclick="switchGenerator(1)"></span>
+        <span class="dot" onclick="switchGenerator(2)"></span>
+        <span class="dot" onclick="switchGenerator(3)"></span>
+        <span class="dot" onclick="switchGenerator(4)"></span>
+        <span class="dot" onclick="switchGenerator(5)"></span>
+        <span class="dot" onclick="switchGenerator(6)"></span>
+    </div>
+    
+    <div id="statsModal" class="stats-modal" style="display:none;">
+        <h2>Статистика пользователей</h2>
+        <ul id="userStats"></ul>
+        <button id="closeStats">Закрыть</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
